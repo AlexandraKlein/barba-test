@@ -472,7 +472,7 @@ article .next {
     opacity: 0;
     transition: all 0.5s ease-out; }
   .transition-out .content > .copy {
-    animation: scaleDownOut 0.25s ease-out forwards; }
+    display: none; }
   .transition-out .next {
     height: auto;
     overflow: visible; }

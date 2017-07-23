@@ -76,7 +76,8 @@ article {
   .content {
 
     > .copy {
-      animation: scaleDownOut $duration/4 ease-out forwards;
+      //animation: scaleDownOut $duration/4 ease-out forwards;
+      display: none;
     }
   }
 
