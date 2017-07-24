@@ -9,7 +9,9 @@ var transition = Barba.BaseTransition.extend({
       .all([this.newContainerLoading, this.fadeOut()])
       .then(this.fadeIn.bind(this));
 
-    window.scrollTo(0, 0);
+   // window.scrollTo(0, 0);
+    $('html, body').animate({ scrollTop: 0 }, speed / 2);
+
 
   },
 
@@ -17,7 +19,7 @@ var transition = Barba.BaseTransition.extend({
     var $elOld = $(this.oldContainer);
     var $nextArticle = $elOld.find('.next');
     var height = $nextArticle.height();
-    var translationValue = $nextArticle.get(0).getBoundingClientRect().top;
+    var translationValue = $nextArticle.offset().top + (height / 2);
 
     $elOld.removeClass('transition-in')
       .addClass('transition-out')
